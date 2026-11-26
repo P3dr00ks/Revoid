@@ -16,7 +16,6 @@ create table if not exists public.entries (
   sale_number text,
   title text not null,
   seller text,
-  amount numeric(12,2),
   service_status text,
   details text,
   updated_at timestamptz not null default now(),
@@ -43,4 +42,5 @@ Em **Authentication → URL Configuration**, configure o Site URL e adicione a U
 Em **Project Settings → API**, copie a Project URL e a chave **Publishable** (ou `anon` legacy). No painel “Sincronização online · Supabase” do REVOID, salve esses valores e entre ou crie uma conta. A senha é enviada diretamente ao Supabase Auth e não é armazenada pelo REVOID.
 
 O primeiro uso em um aparelho novo apenas baixa e combina os registros. Para enviar os registros locais existentes à nuvem, use “Sincronizar meus registros” e confirme a quantidade apresentada. Depois, novos registros, edições e exclusões são sincronizados automaticamente quando a sessão estiver ativa. Faça exportação JSON de backup regularmente.
+
 
