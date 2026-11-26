@@ -4,7 +4,7 @@ Site independente para registrar vendas, assistências técnicas e outras ativid
 
 ## Como abrir
 
-Abra `index.html` em um navegador moderno. Não precisa instalar dependências nem iniciar servidor. A fonte decorativa é carregada do Google Fonts quando há conexão; o restante do site funciona localmente.
+Abra `index.html` em um navegador moderno ou visite o link do GitHub Pages. O layout se adapta a celulares, tablets e notebooks; não precisa instalar dependências nem iniciar servidor. A fonte decorativa é carregada do Google Fonts quando há conexão; o restante do site funciona localmente.
 
 ## Recursos
 
@@ -12,9 +12,11 @@ Abra `index.html` em um navegador moderno. Não precisa instalar dependências n
 - Contadores das atividades registradas na data atual.
 - Filtros por categoria e opção para excluir registros.
 - Exportação de todos os registros para CSV.
-- Dados salvos no armazenamento local do navegador em uso.
+- Dados salvos no armazenamento local do navegador em uso. O conteúdo não é sincronizado automaticamente entre dispositivos.
 
 Para preservar os dados, mantenha o mesmo navegador e dispositivo. Limpar os dados do navegador pode apagar o diário.
+
+
 
 
 
