@@ -28,7 +28,10 @@
   $('entries').addEventListener('click',async ev=>{const del=ev.target.closest('[data-delete]'),edit=ev.target.closest('[data-edit]');if(del){const id=del.dataset.delete;if(!confirm('Excluir este registro permanentemente?'))return;entries=entries.filter(e=>e.id!==id);save();if(cloudUser)await deleteRemote(id);}if(edit){const e=entries.find(x=>x.id===edit.dataset.edit);if(!e)return;editingId=e.id;for(const k of ['type','title','date','time','saleNumber','seller','amount','serviceStatus','details'])$(k).value=e[k]??'';formType();$('formHeading').textContent='Editar registro';$('formIcon').textContent='✎';$('saveEntryBtn').textContent='Salvar alterações';$('cancelEditBtn').hidden=false;window.scrollTo({top:0,behavior:'smooth'});}});
   document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{activeFilter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));render();}));
   $('dateFrom').addEventListener('change',render);$('dateTo').addEventListener('change',render);$('clearDatesBtn').addEventListener('click',()=>{$('dateFrom').value='';$('dateTo').value='';render();});$('printBtn').addEventListener('click',()=>window.print());
-  $('exportBtn').addEventListener('click',()=>{const rows=filtered();const cols=['date','time','type','saleNumber','title','seller','amount','serviceStatus','details'];const csv=[cols.join(';'),...rows.map(e=>cols.map(k=>'"'+String(e[k]??'').replaceAll('"','""')+'"').join(';'))].join('\r\n');download(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}),'revoid-relatorio.csv');});
+  const csvColumns=['date','time','type','saleNumber','title','seller','amount','serviceStatus','details'];
+  function exportCsv(rows,name){const csv=[csvColumns.join(';'),...rows.map(e=>csvColumns.map(k=>'"'+String(e[k]??'').replaceAll('"','""')+'"').join(';'))].join('\r\n');download(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}),name);}
+  $('exportBtn').addEventListener('click',()=>exportCsv(filtered(),'revoid-relatorio-filtrado.csv'));
+  $('exportTodayBtn').addEventListener('click',()=>{const today=isoToday(),rows=entries.filter(e=>e.date===today);exportCsv(rows,`revoid-diario-${today}.csv`);});
   function filtered(){const f=$('dateFrom').value,t=$('dateTo').value;return entries.filter(e=>(activeFilter==='Todos'||e.type===activeFilter)&&(!f||e.date>=f)&&(!t||e.date<=t));}
   function download(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}
   $('backupExportBtn').addEventListener('click',()=>download(new Blob([JSON.stringify({format:'revoid-backup-v1',exportedAt:new Date().toISOString(),entries},null,2)],{type:'application/json'}),'revoid-backup.json'));
@@ -52,4 +55,5 @@
   if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
   resetForm();render();
 })();
+
 
