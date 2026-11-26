@@ -1,6 +1,6 @@
 # REVOID — Diário de campo
 
-Site independente para registrar vendas, assistências técnicas e outras atividades, com estética gótica inspirada no PS2 e cybertribal.
+Site independente para registrar vendas, assistências técnicas e outras atividades, com estética gótica inspirada no PS2 e cybertribal, com vinhas espinhosas no fundo.
 
 ## Uso
 
@@ -19,4 +19,5 @@ Abra `index.html` em um navegador moderno ou acesse [REVOID no GitHub Pages](htt
 Consulte [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) para criar a tabela com Row Level Security e conectar seu projeto. A sincronização requer URL e chave publicável do seu próprio projeto, além de uma conta. As credenciais de configuração ficam no armazenamento local do navegador; nunca use uma chave `service_role` no site.
 
 Sem Supabase configurado, os registros ficam apenas no aparelho e navegador atuais. Exporte backups JSON para preservar ou transferir seus dados.
+
 
