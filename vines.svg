@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="stem" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e5bfd0"/><stop offset=".52" stop-color="#b66f88"/><stop offset="1" stop-color="#8e5b98"/>
+    </linearGradient>
+    <g id="leaf" fill="#25101d" fill-opacity=".62" stroke="url(#stem)" stroke-width="2.2" stroke-linejoin="round">
+      <path d="M0 0 C-18-22-49-30-68-15 C-52 3-28 10 0 0Z"/>
+      <path d="M-2-1 -57-14" fill="none" stroke-width="1.2"/>
+      <path d="M-31-9 -39-19M-19-6 -24-16" fill="none" stroke-width="1"/>
+    </g>
+    <g id="thorn" fill="none" stroke="url(#stem)" stroke-width="2.3" stroke-linecap="round">
+      <path d="M0 0 Q-8-10-17-25 M-15-22 -25-25"/>
+      <path d="M0 0 Q8 11 16 24 M14 21 25 24"/>
+    </g>
+  </defs>
+  <g fill="none" stroke="url(#stem)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".78">
+    <path d="M-40 130 C145 70 132 300 320 265 S470 85 605 154 S722 322 890 270 S1020 96 1165 120 S1370 300 1640 205"/>
+    <path d="M80 1040 C155 855 310 940 390 748 S330 535 498 460 S690 500 778 365 S875 205 1020 205"/>
+    <path d="M470-35 C560 105 745 83 820 200 S782 420 954 490 S1160 445 1220 620 S1380 780 1645 760"/>
+    <path d="M-45 655 C115 610 188 720 330 667 S518 562 640 650 S772 846 950 810 S1165 682 1302 742 S1465 925 1625 880"/>
+    <path d="M1280-30 C1220 145 1370 250 1305 382 S1120 520 1168 675 S1340 780 1285 1035"/>
+    <path d="M-30 340 C170 390 258 302 350 390 S460 590 605 555 S765 410 860 475"/>
+  </g>
+  <g opacity=".76">
+    <use href="#thorn" x="176" y="120"/><use href="#thorn" x="320" y="265"/><use href="#thorn" x="474" y="120"/><use href="#thorn" x="605" y="154"/><use href="#thorn" x="890" y="270"/><use href="#thorn" x="1165" y="120"/><use href="#thorn" x="1435" y="260"/>
+    <use href="#thorn" x="155" y="860"/><use href="#thorn" x="390" y="748"/><use href="#thorn" x="498" y="460"/><use href="#thorn" x="778" y="365"/><use href="#thorn" x="954" y="490"/><use href="#thorn" x="1220" y="620"/><use href="#thorn" x="1380" y="780"/>
+    <use href="#thorn" x="820" y="200"/><use href="#thorn" x="954" y="490"/><use href="#thorn" x="1168" y="675"/><use href="#thorn" x="1305" y="382"/><use href="#thorn" x="1285" y="900"/>
+    <use href="#thorn" x="330" y="667"/><use href="#thorn" x="640" y="650"/><use href="#thorn" x="950" y="810"/><use href="#thorn" x="1302" y="742"/><use href="#thorn" x="1465" y="925"/>
+    <use href="#thorn" x="350" y="390"/><use href="#thorn" x="605" y="555"/><use href="#thorn" x="860" y="475"/>
+  </g>
+  <g opacity=".82">
+    <use href="#leaf" transform="translate(233 90) rotate(12)"/><use href="#leaf" transform="translate(415 228) rotate(202)"/><use href="#leaf" transform="translate(543 112) rotate(18)"/><use href="#leaf" transform="translate(740 292) rotate(205)"/><use href="#leaf" transform="translate(1046 238) rotate(15)"/><use href="#leaf" transform="translate(1360 196) rotate(200)"/>
+    <use href="#leaf" transform="translate(254 875) rotate(12)"/><use href="#leaf" transform="translate(355 813) rotate(190)"/><use href="#leaf" transform="translate(444 510) rotate(28)"/><use href="#leaf" transform="translate(696 445) rotate(190)"/><use href="#leaf" transform="translate(884 452) rotate(12)"/><use href="#leaf" transform="translate(1097 487) rotate(195)"/><use href="#leaf" transform="translate(1327 716) rotate(13)"/>
+    <use href="#leaf" transform="translate(764 147) rotate(200)"/><use href="#leaf" transform="translate(893 414) rotate(16)"/><use href="#leaf" transform="translate(1150 592) rotate(196)"/><use href="#leaf" transform="translate(1312 322) rotate(18)"/><use href="#leaf" transform="translate(1249 851) rotate(192)"/>
+    <use href="#leaf" transform="translate(229 647) rotate(193)"/><use href="#leaf" transform="translate(521 611) rotate(15)"/><use href="#leaf" transform="translate(818 791) rotate(194)"/><use href="#leaf" transform="translate(1193 706) rotate(15)"/><use href="#leaf" transform="translate(1457 867) rotate(195)"/>
+  </g>
+  <g fill="none" stroke="#e4b3c7" stroke-width="2.5" opacity=".64" stroke-linecap="round">
+    <path d="M75 232 C145 187 190 197 218 160 M670 87 C710 35 774 42 811 75 M1030 920 C1090 872 1145 875 1175 912 M1500 510 C1440 476 1402 489 1380 530 M80 480 C120 432 166 427 202 448 M1480 80 C1445 130 1400 135 1372 116"/>
+  </g>
+</svg>
+
