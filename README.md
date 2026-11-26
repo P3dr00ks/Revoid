@@ -16,9 +16,10 @@ Abra `index.html` em um navegador moderno ou acesse [REVOID no GitHub Pages](htt
 
 ## Sincronização online
 
-Consulte [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) para criar a tabela com Row Level Security e conectar seu projeto. A sincronização requer URL e chave publicável do seu próprio projeto, além de uma conta. As credenciais de configuração ficam no armazenamento local do navegador; nunca use uma chave `service_role` no site.
+O projeto Supabase do REVOID já vem conectado no app. Basta criar uma conta e entrar com ela em cada aparelho. O cliente web usa uma chave publicável, protegida por políticas Row Level Security; nunca use uma chave `service_role` no site. Consulte [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) para detalhes da tabela e das políticas.
 
 Sem Supabase configurado, os registros ficam apenas no aparelho e navegador atuais. Exporte backups JSON para preservar ou transferir seus dados.
+
 
 
 
