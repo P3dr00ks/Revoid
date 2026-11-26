@@ -39,8 +39,9 @@ Em **Authentication → URL Configuration**, configure o Site URL e adicione a U
 
 ## 3. Conectar o site
 
-Em **Project Settings → API**, copie a Project URL e a chave **Publishable** (ou `anon` legacy). No painel “Sincronização online · Supabase” do REVOID, salve esses valores e entre ou crie uma conta. A senha é enviada diretamente ao Supabase Auth e não é armazenada pelo REVOID.
+O app REVOID publicado já contém a URL do projeto e usa a chave **Publishable** para o cliente web. Essa chave foi feita para uso público no navegador; as políticas RLS limitam cada conta aos próprios registros. Nunca substitua pela chave `service_role`. Abra o painel “Sincronização online · Supabase” para criar uma conta ou entrar. A senha é enviada diretamente ao Supabase Auth e não é armazenada pelo REVOID.
 
 O primeiro uso em um aparelho novo apenas baixa e combina os registros. Para enviar os registros locais existentes à nuvem, use “Sincronizar meus registros” e confirme a quantidade apresentada. Depois, novos registros, edições e exclusões são sincronizados automaticamente quando a sessão estiver ativa. Faça exportação JSON de backup regularmente.
+
 
 
