@@ -14,7 +14,7 @@
 body{background:radial-gradient(ellipse at 76% -12%,#482039 0,transparent 42%),radial-gradient(ellipse at -8% 60%,#26101c 0,transparent 38%),var(--bg)}
 body:before{opacity:.1;background-image:linear-gradient(#c78caa16 1px,transparent 1px),linear-gradient(90deg,#c78caa16 1px,transparent 1px)}
 body:before{opacity:1;background-image:radial-gradient(ellipse at center,#10070d00 25%,#10070d99 100%);background-size:auto;mask-image:none}
-.chain-overlay{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.32;background:url('chains.svg') center/100% 100% no-repeat}
+.chain-overlay{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.32;background:url('chains.svg') center/cover no-repeat}
 .shell{z-index:1}
 .topbar{border-bottom-color:#8d526b33}.brand-mark{border-color:var(--pink);color:var(--pink);box-shadow:0 0 20px #df6f8733}.brand em,.eyebrow,.card-title b,.export{color:var(--pink)}
 .stat,.card{background:linear-gradient(145deg,#25101fed,#130910f2);border-color:#563047;box-shadow:inset 0 1px #f1dce70a,0 12px 35px #0005}.stat:nth-child(1) .stat-value{color:#d9a4bf}.stat:nth-child(2) .stat-value{color:#c2a8db}.stat:nth-child(3) .stat-value{color:#ed8294}.stat:nth-child(4) .stat-value{color:#d8b978}
@@ -38,5 +38,6 @@ function render(){const todays=entries.filter(e=>e.date===today());$('totalToday
 function save(){localStorage.setItem(KEY,JSON.stringify(entries));render()}
 $('entryForm').addEventListener('submit',ev=>{ev.preventDefault();const d=new Date();entries.push({id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),date:today(),time:$('time').value,type:$('type').value,saleNumber:$('saleNumber').value.trim(),title:$('title').value.trim(),seller:$('seller').value.trim(),details:$('details').value.trim()});save();ev.target.reset();clock();$('title').focus()});document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{document.querySelector('.filter.active').classList.remove('active');b.classList.add('active');activeFilter=b.dataset.filter;render()}));$('exportBtn').addEventListener('click',()=>{if(!entries.length)return;const rows=[['Data','Horário','Tipo','Número da venda','Título / equipamento','Vendedor','Detalhes'],...entries.map(e=>[e.date,e.time,e.type,e.saleNumber,e.title,e.seller,e.details])];const csv='\uFEFF'+rows.map(r=>r.map(v=>'"'+String(v||'').replaceAll('"','""')+'"').join(';')).join('\r\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download=`voidlog-relatorio-${today()}.csv`;a.click();URL.revokeObjectURL(a.href)});$('type').addEventListener('change',()=>{const sale=$('type').value==='Venda';document.querySelectorAll('.sale-only').forEach(el=>el.hidden=!sale)});$('type').dispatchEvent(new Event('change'));clock();setInterval(clock,1000);render();
 </script></body></html>
+
 
 
