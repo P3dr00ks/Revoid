@@ -1,4 +1,4 @@
-# VOID//LOG — Diário de campo
+# REVOID — Diário de campo
 
 Site independente para registrar vendas, assistências técnicas e outras atividades do dia, com estética gótica inspirada no PS2 e cybertribal, correntes espinhosas cruzando o fundo.
 
@@ -15,6 +15,8 @@ Abra `index.html` em um navegador moderno. Não precisa instalar dependências n
 - Dados salvos no armazenamento local do navegador em uso.
 
 Para preservar os dados, mantenha o mesmo navegador e dispositivo. Limpar os dados do navegador pode apagar o diário.
+
+
 
 
 
