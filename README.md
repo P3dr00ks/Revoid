@@ -1,24 +1,22 @@
 # REVOID — Diário de campo
 
-Site independente para registrar vendas, assistências técnicas e outras atividades do dia, com estética gótica inspirada no PS2 e cybertribal, correntes espinhosas cruzando o fundo.
+Site independente para registrar vendas, assistências técnicas e outras atividades, com estética gótica inspirada no PS2 e cybertribal.
 
-## Como abrir
+## Uso
 
-Abra `index.html` em um navegador moderno ou visite o link do GitHub Pages. O layout se adapta a celulares, tablets e notebooks; não precisa instalar dependências nem iniciar servidor. A fonte decorativa é carregada do Google Fonts quando há conexão; o restante do site funciona localmente.
+Abra `index.html` em um navegador moderno ou acesse [REVOID no GitHub Pages](https://p3dr00ks.github.io/Revoid/). O layout se adapta a celulares, tablets e computadores. O app pode ser instalado pelo navegador e a interface principal é armazenada para uso offline após a primeira visita.
 
 ## Recursos
 
-- Registros com tipo, número da venda, equipamento/serviço, vendedor, horário e detalhes.
-- Contadores das atividades registradas na data atual.
-- Filtros por categoria e opção para excluir registros.
-- Exportação de todos os registros para CSV.
-- Dados salvos no armazenamento local do navegador em uso. O conteúdo não é sincronizado automaticamente entre dispositivos.
+- Registrar vendas (número, vendedor e valor), assistências (status) e outras atividades, com data, hora e observações.
+- Editar e excluir registros; ver contadores do dia e filtrar a linha do tempo por categoria e período.
+- Ver totais de vendas no período, exportar CSV e imprimir/salvar relatório como PDF.
+- Fazer backup JSON e importar dados mesclando com os registros atuais.
+- Guardar dados localmente no navegador ou configurar sincronização privada entre aparelhos via Supabase.
 
-Para preservar os dados, mantenha o mesmo navegador e dispositivo. Limpar os dados do navegador pode apagar o diário.
+## Sincronização online
 
+Consulte [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) para criar a tabela com Row Level Security e conectar seu projeto. A sincronização requer URL e chave publicável do seu próprio projeto, além de uma conta. As credenciais de configuração ficam no armazenamento local do navegador; nunca use uma chave `service_role` no site.
 
-
-
-
-
+Sem Supabase configurado, os registros ficam apenas no aparelho e navegador atuais. Exporte backups JSON para preservar ou transferir seus dados.
 
